@@ -1,0 +1,72 @@
+mkdir -p _output/bin
+mkdir -p _output/release
+go: creating new go.mod: module tmp
+go: downloading sigs.k8s.io/controller-tools v0.20.0
+# volcano crd base
+/Users/kuantian/go/bin/controller-gen "crd:crdVersions=v1,generateEmbeddedObjectMeta=true" \
+		paths="./staging/src/volcano.sh/apis/pkg/apis/scheduling/v1beta1; \
+		./staging/src/volcano.sh/apis/pkg/apis/batch/v1alpha1; \
+		./staging/src/volcano.sh/apis/pkg/apis/bus/v1alpha1; \
+		./staging/src/volcano.sh/apis/pkg/apis/nodeinfo/v1alpha1; \
+		./staging/src/volcano.sh/apis/pkg/apis/topology/v1alpha1; \
+		./staging/src/volcano.sh/apis/pkg/apis/shard/v1alpha1; \
+		./staging/src/volcano.sh/apis/pkg/apis/config/v1alpha1" \
+		output:crd:artifacts:config=config/crd/volcano/bases
+# generate volcano job crd yaml without description to avoid yaml size limit when using `kubectl apply`
+/Users/kuantian/go/bin/controller-gen "crd:crdVersions=v1,generateEmbeddedObjectMeta=true"",maxDescLen=0" \
+		paths="./staging/src/volcano.sh/apis/pkg/apis/batch/v1alpha1" \
+		output:crd:artifacts:config=config/crd/volcano/bases
+# jobflow crd base
+/Users/kuantian/go/bin/controller-gen "crd:crdVersions=v1,generateEmbeddedObjectMeta=true" \
+		paths="./staging/src/volcano.sh/apis/pkg/apis/flow/v1alpha1" \
+		output:crd:artifacts:config=config/crd/jobflow/bases
+# generate volcano jobflow crd yaml without description to avoid yaml size limit when using `kubectl apply`
+/Users/kuantian/go/bin/controller-gen "crd:crdVersions=v1,generateEmbeddedObjectMeta=true"",maxDescLen=0" \
+		paths="./staging/src/volcano.sh/apis/pkg/apis/flow/v1alpha1" \
+		output:crd:artifacts:config=config/crd/jobflow/bases
+./hack/generate-yaml.sh CRD_VERSION=v1
+ValidatingAdmissionPolicy disabled
+MutatingAdmissionPolicy disabled
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  1 13.1M    1  144k    0     0   134k      0  0:01:40  0:00:01  0:01:39  134k
+  6 13.1M    6  815k    0     0   392k      0  0:00:34  0:00:02  0:00:32  392k
+ 13 13.1M   13 1865k    0     0   607k      0  0:00:22  0:00:03  0:00:19  607k
+ 16 13.1M   16 2242k    0     0   526k      0  0:00:25  0:00:04  0:00:21  526k
+ 21 13.1M   21 2949k    0     0   574k      0  0:00:23  0:00:05  0:00:18  590k
+ 28 13.1M   28 3882k    0     0   629k      0  0:00:21  0:00:06  0:00:15  733k
+ 34 13.1M   34 4686k    0     0   662k      0  0:00:20  0:00:07  0:00:13  775k
+ 41 13.1M   41 5553k    0     0   684k      0  0:00:19  0:00:08  0:00:11  732k
+ 47 13.1M   47 6406k    0     0   704k      0  0:00:19  0:00:09  0:00:10  862k
+ 54 13.1M   54 7343k    0     0   722k      0  0:00:18  0:00:10  0:00:08  874k
+ 63 13.1M   63 8582k    0     0   774k      0  0:00:17  0:00:11  0:00:06  957k
+ 73 13.1M   73 9910k    0     0   820k      0  0:00:16  0:00:12  0:00:04 1044k
+ 80 13.1M   80 10.6M    0     0   829k      0  0:00:16  0:00:13  0:00:03 1065k
+ 88 13.1M   88 11.6M    0     0   845k      0  0:00:15  0:00:14  0:00:01 1100k
+ 95 13.1M   95 12.6M    0     0   856k      0  0:00:15  0:00:15 --:--:-- 1133k
+100 13.1M  100 13.1M    0     0   854k      0  0:00:15  0:00:15 --:--:-- 1040k
+Updating templates in /private/tmp/volcano-6382-checks/validation/hack/../installer/helm/chart/volcano/templates
+Generating volcano yaml file into /private/tmp/volcano-6382-checks/validation/hack/../_output/release/volcano-latest.yaml
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/kuantian/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/kuantian/.kube/config
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/bases
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/bases
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/kuantian/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/kuantian/.kube/config
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/bases
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/kuantian/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/kuantian/.kube/config
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/bases
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/bases
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/kuantian/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/kuantian/.kube/config
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/bases
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/bases
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/kuantian/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/kuantian/.kube/config
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/charts/jobflow/crd/bases
+walk.go:74: found symbolic link in path: /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/v1 resolves to /private/tmp/volcano-6382-checks/validation/installer/helm/chart/volcano/crd/bases
+Generating agent scheduler yaml file into /private/tmp/volcano-6382-checks/validation/hack/../_output/release/volcano-agent-scheduler-latest.yaml

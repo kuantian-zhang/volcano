@@ -1,0 +1,25 @@
+hack/verify-golangci-lint.sh
+Checking golangci-lint installation ...
+golangci-lint v2.12.2 found.
+Running golangci-lint ...
+level=info msg="golangci-lint has version 2.12.2 built with go1.26.0 from (unknown, modified: ?, mod sum: \"h1:7+d1uY0bq1MU2UV3R5pW5Q7QWdcoq4naMRXM+gsJKrs=\") on (unknown)"
+level=info msg="[config_reader] Config search paths: [./ /private/tmp/volcano-6382-checks/validation /private/tmp/volcano-6382-checks /private/tmp /private / /Users/kuantian]"
+level=info msg="[config_reader] Used config file .golangci.yml"
+level=info msg="[config_reader] Module name \"volcano.sh/volcano\""
+level=info msg="[goenv] Read go env for 14.423083ms: map[string]string{\"GOCACHE\":\"/Users/kuantian/Library/Caches/go-build\", \"GOROOT\":\"/Users/kuantian/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.darwin-arm64\"}"
+level=info msg="[lintersdb] Active 8 linters: [depguard gofmt goimports govet ineffassign staticcheck unused whitespace]"
+level=info msg="[loader] Go packages loading at mode 8767 (imports|compiled_files|deps|files|name|types_sizes|exports_file) took 5m5.892831625s"
+level=info msg="[runner/filename_unadjuster] Pre-built 0 adjustments in 257.150667ms"
+level=info msg="Memory: 5710 samples, avg is 1966.9MB, max is 5782.7MB"
+level=info msg="Execution took 10m0.013997709s"
+hack/verify-golangci-lint.sh: line 116: 37524 Terminated: 15          golangci-lint run -v
+FAILED: golangci-lint stale.
+
+Please review the above warnings. You can test via './hack/verify-golangci-lint.sh' or 'make lint'.
+If the above warnings do not make sense, you can exempt this warning with a comment
+ (if your reviewer is okay with it).
+In general please prefer to fix the error, we have already disabled specific lints
+ that the project chooses to ignore.
+See: https://golangci-lint.run/usage/false-positives/
+
+make: *** [lint] Error 1

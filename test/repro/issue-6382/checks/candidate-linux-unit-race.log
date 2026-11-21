@@ -1,0 +1,182 @@
+go version go1.26.0 linux/arm64
+Linux CI-equivalent unit test package count: 161
+ok  	volcano.sh/volcano/cmd/agent-scheduler/app/options	1.072s
+ok  	volcano.sh/volcano/cmd/agent/app/options	1.064s
+ok  	volcano.sh/volcano/cmd/controller-manager/app	1.102s
+ok  	volcano.sh/volcano/cmd/controller-manager/app/options	1.086s
+ok  	volcano.sh/volcano/cmd/hypernode-controller-manager/app	1.065s
+ok  	volcano.sh/volcano/cmd/hypernode-controller-manager/app/options	1.092s
+ok  	volcano.sh/volcano/cmd/network-qos/cni	1.076s
+ok  	volcano.sh/volcano/cmd/network-qos/tools	1.053s
+ok  	volcano.sh/volcano/cmd/network-qos/tools/options	1.012s
+ok  	volcano.sh/volcano/cmd/scheduler/app/options	1.080s
+ok  	volcano.sh/volcano/cmd/webhook-manager/app/options	1.168s
+ok  	volcano.sh/volcano/pkg/agent/apis/extension	1.035s
+ok  	volcano.sh/volcano/pkg/agent/config	3.210s
+ok  	volcano.sh/volcano/pkg/agent/config/api	1.014s
+ok  	volcano.sh/volcano/pkg/agent/config/utils	1.058s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/cpuburst	1.067s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/cpuqos	1.052s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/cputhrottle	1.047s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/eviction	1.154s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/memoryqos	1.060s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2	1.058s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/networkqos	1.364s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/oversubscription	1.058s
+ok  	volcano.sh/volcano/pkg/agent/events/handlers/resources	1.083s
+ok  	volcano.sh/volcano/pkg/agent/events/probes	1.051s
+ok  	volcano.sh/volcano/pkg/agent/events/probes/nodemonitor	1.061s
+ok  	volcano.sh/volcano/pkg/agent/events/probes/noderesources	1.082s
+ok  	volcano.sh/volcano/pkg/agent/features	1.049s
+ok  	volcano.sh/volcano/pkg/agent/utils	1.071s
+ok  	volcano.sh/volcano/pkg/agent/utils/cgroup	1.048s
+ok  	volcano.sh/volcano/pkg/agent/utils/node	1.071s
+ok  	volcano.sh/volcano/pkg/agent/utils/pod	1.089s
+ok  	volcano.sh/volcano/pkg/agent/utils/version	1.009s
+ok  	volcano.sh/volcano/pkg/agentscheduler	1.137s
+ok  	volcano.sh/volcano/pkg/agentscheduler/actions/allocate	2.087s
+ok  	volcano.sh/volcano/pkg/agentscheduler/cache	1.123s
+ok  	volcano.sh/volcano/pkg/agentscheduler/plugins/predicates	1.103s
+ok  	volcano.sh/volcano/pkg/cli/job	1.169s
+ok  	volcano.sh/volcano/pkg/cli/jobflow	1.074s
+ok  	volcano.sh/volcano/pkg/cli/jobtemplate	1.084s
+ok  	volcano.sh/volcano/pkg/cli/pod	1.078s
+ok  	volcano.sh/volcano/pkg/cli/queue	1.077s
+ok  	volcano.sh/volcano/pkg/cli/util	1.051s
+ok  	volcano.sh/volcano/pkg/cli/vcancel	1.057s
+ok  	volcano.sh/volcano/pkg/cli/vresume	1.087s
+ok  	volcano.sh/volcano/pkg/cli/vsuspend	1.054s
+ok  	volcano.sh/volcano/pkg/config	1.072s
+ok  	volcano.sh/volcano/pkg/controllers/apis	1.020s
+ok  	volcano.sh/volcano/pkg/controllers/cache	1.154s
+ok  	volcano.sh/volcano/pkg/controllers/colocationconfig	1.536s
+ok  	volcano.sh/volcano/pkg/controllers/cronjob	1.081s
+ok  	volcano.sh/volcano/pkg/controllers/garbagecollector	1.035s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode	3.851s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/api	1.038s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/config	1.037s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery	1.148s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery/label	1.062s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery/ufm	1.040s
+ok  	volcano.sh/volcano/pkg/controllers/job	3.521s
+ok  	volcano.sh/volcano/pkg/controllers/job/helpers	1.060s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/hcclrank	1.060s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/mpi	1.078s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/pytorch	1.061s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/ray	1.102s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/tensorflow	1.077s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/ssh	1.104s
+ok  	volcano.sh/volcano/pkg/controllers/jobflow	1.078s
+ok  	volcano.sh/volcano/pkg/controllers/jobflow/state	1.056s
+ok  	volcano.sh/volcano/pkg/controllers/jobtemplate	1.105s
+ok  	volcano.sh/volcano/pkg/controllers/metrics	1.062s
+ok  	volcano.sh/volcano/pkg/controllers/namespacequeue	1.083s
+ok  	volcano.sh/volcano/pkg/controllers/podgroup	1.323s
+ok  	volcano.sh/volcano/pkg/controllers/queue	1.071s
+ok  	volcano.sh/volcano/pkg/controllers/queue/state	1.055s
+ok  	volcano.sh/volcano/pkg/controllers/sharding	13.051s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy	1.011s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/allocationrate	1.011s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/nodelimit	1.017s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/warmup	1.046s
+ok  	volcano.sh/volcano/pkg/controllers/util	1.060s
+ok  	volcano.sh/volcano/pkg/filewatcher	1.024s
+ok  	volcano.sh/volcano/pkg/networkqos	1.053s
+ok  	volcano.sh/volcano/pkg/networkqos/cni	1.030s
+ok  	volcano.sh/volcano/pkg/networkqos/throttling	1.046s
+ok  	volcano.sh/volcano/pkg/networkqos/utils	1.018s
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/workspace/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+FAIL
+FAIL	volcano.sh/volcano/pkg/networkqos/utils/ebpf	0.017s
+ok  	volcano.sh/volcano/pkg/resourceusage	1.051s
+ok  	volcano.sh/volcano/pkg/scheduler	1.161s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/allocate	38.121s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/backfill	2.672s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/enqueue	2.979s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/gangpreempt	1.085s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/gangreclaim	1.100s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/preempt	14.515s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/reclaim	5.632s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/shuffle	1.472s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/utils	2.614s
+ok  	volcano.sh/volcano/pkg/scheduler/api	1.554s
+ok  	volcano.sh/volcano/pkg/scheduler/api/devices/ascend/hami	1.050s
+ok  	volcano.sh/volcano/pkg/scheduler/api/devices/config	1.028s
+ok  	volcano.sh/volcano/pkg/scheduler/api/devices/nvidia/gpushare	1.067s
+ok  	volcano.sh/volcano/pkg/scheduler/api/devices/nvidia/vgpu	1.140s
+ok  	volcano.sh/volcano/pkg/scheduler/api/helpers	1.053s
+ok  	volcano.sh/volcano/pkg/scheduler/cache	3.888s
+ok  	volcano.sh/volcano/pkg/scheduler/framework	1.210s
+ok  	volcano.sh/volcano/pkg/scheduler/metrics	1.114s
+ok  	volcano.sh/volcano/pkg/scheduler/metrics/source	1.134s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins	1.083s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/binpack	1.098s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/capacity	20.492s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/capacity/hintprovider	1.072s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/cdp	1.081s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/conformance	1.083s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/deviceshare	1.085s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/drf	1.160s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/extender	1.513s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/fairshare	1.885s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/gang	1.080s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/group-topology-affinity	1.167s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/network-topology-aware	1.687s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/nodegroup	1.190s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/nodeorder	4.308s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/numaaware	1.133s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/numaaware/policy	1.090s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/numaaware/provider/cpumanager	1.068s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/overcommit	1.090s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/pdb	1.076s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/predicates	3.568s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/predicates/hintprovider	1.079s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/priority	1.840s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/proportion	13.035s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/proportion/hintprovider	1.073s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/resource-strategy-fit	2.031s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/resourcequota	1.453s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/sla	1.083s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/task-topology	1.080s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/tdm	8.539s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/usage	1.139s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/util	1.100s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/util/hintutil	1.061s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/util/k8s	1.112s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/util/nodelock	1.042s
+ok  	volcano.sh/volcano/pkg/scheduler/plugins/util/nodescore	1.090s
+ok  	volcano.sh/volcano/pkg/scheduler/unschedulable	1.111s
+ok  	volcano.sh/volcano/pkg/scheduler/util	1.099s
+ok  	volcano.sh/volcano/pkg/util	1.094s
+ok  	volcano.sh/volcano/pkg/util/hypernode	1.037s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/cronjobs/validate	1.065s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/hypernodes/validate	1.062s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/jobflows/validate	1.082s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/jobs/mutate	1.088s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/jobs/plugins/mpi	1.061s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/jobs/validate	1.120s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/namespacequeues/validate	1.082s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/podgroups/mutate	1.077s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/podgroups/validate	1.063s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/pods/mutate	1.082s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/pods/validate	1.080s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/queues/mutate	1.065s
+ok  	volcano.sh/volcano/pkg/webhooks/admission/queues/validate	1.110s
+ok  	volcano.sh/volcano/pkg/webhooks/router	1.060s
+FAIL

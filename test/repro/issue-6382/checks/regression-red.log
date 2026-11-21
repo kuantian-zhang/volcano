@@ -1,0 +1,162 @@
+W1121 16:35:42.561515   44180 job_info.go:821] failed to find task <test/worker> in job <test/workers>
+W1121 16:35:42.561886   44180 job_info.go:821] failed to find task <test/worker> in job <test/workers>
+--- FAIL: TestSchedulerCache_SyncTask (0.00s)
+    --- FAIL: TestSchedulerCache_SyncTask/task_replaced_before_resync_is_retried_without_an_API_read (0.00s)
+        synctask_test.go:253: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:253
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestSchedulerCache_SyncTask/task_replaced_before_resync_is_retried_without_an_API_read
+        synctask_test.go:263: obsolete cache snapshot should not issue an API GET
+        synctask_test.go:277: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:277
+            	Error:      	Not equal: 
+            	            	expected: "2"
+            	            	actual  : "1"
+            	            	
+            	            	Diff:
+            	            	--- Expected
+            	            	+++ Actual
+            	            	@@ -1 +1 @@
+            	            	-2
+            	            	+1
+            	Test:       	TestSchedulerCache_SyncTask/task_replaced_before_resync_is_retried_without_an_API_read
+        synctask_test.go:278: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:278
+            	Error:      	Not equal: 
+            	            	expected: false
+            	            	actual  : true
+            	Test:       	TestSchedulerCache_SyncTask/task_replaced_before_resync_is_retried_without_an_API_read
+    --- FAIL: TestSchedulerCache_SyncTask/task_deleted_before_resync_is_not_fetched_again (0.00s)
+        synctask_test.go:263: obsolete cache snapshot should not issue an API GET
+        synctask_test.go:270: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:270
+            	Error:      	Expected nil, but got: &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1199aa0), InitResreq:(*api.Resource)(0x776ab1199aa0), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:true, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab1214c90), Pod:(*v1.Pod)(0x776ab10d4a08), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	Test:       	TestSchedulerCache_SyncTask/task_deleted_before_resync_is_not_fetched_again
+    --- FAIL: TestSchedulerCache_SyncTask/gate_removal_while_GET_is_in_flight_is_preserved (0.00s)
+        synctask_test.go:253: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:253
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestSchedulerCache_SyncTask/gate_removal_while_GET_is_in_flight_is_preserved
+        synctask_test.go:277: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:277
+            	Error:      	Not equal: 
+            	            	expected: "2"
+            	            	actual  : "1"
+            	            	
+            	            	Diff:
+            	            	--- Expected
+            	            	+++ Actual
+            	            	@@ -1 +1 @@
+            	            	-2
+            	            	+1
+            	Test:       	TestSchedulerCache_SyncTask/gate_removal_while_GET_is_in_flight_is_preserved
+        synctask_test.go:278: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:278
+            	Error:      	Not equal: 
+            	            	expected: false
+            	            	actual  : true
+            	Test:       	TestSchedulerCache_SyncTask/gate_removal_while_GET_is_in_flight_is_preserved
+    --- FAIL: TestSchedulerCache_SyncTask/NotFound_cannot_delete_a_concurrent_informer_update (0.00s)
+        synctask_test.go:253: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:253
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestSchedulerCache_SyncTask/NotFound_cannot_delete_a_concurrent_informer_update
+        synctask_test.go:276: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:276
+            	Error:      	Expected value not to be nil.
+            	Test:       	TestSchedulerCache_SyncTask/NotFound_cannot_delete_a_concurrent_informer_update
+    --- FAIL: TestSchedulerCache_SyncTask/deleted_task_is_not_resurrected_by_an_old_GET_result (0.00s)
+        synctask_test.go:270: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:270
+            	Error:      	Expected nil, but got: &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1505800), InitResreq:(*api.Resource)(0x776ab1505800), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:true, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab1215a88), Pod:(*v1.Pod)(0x776ab1678f08), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	Test:       	TestSchedulerCache_SyncTask/deleted_task_is_not_resurrected_by_an_old_GET_result
+    --- FAIL: TestSchedulerCache_SyncTask/PodGroup_replacement_while_GET_is_in_flight_is_preserved (0.00s)
+        synctask_test.go:253: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:253
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestSchedulerCache_SyncTask/PodGroup_replacement_while_GET_is_in_flight_is_preserved
+        synctask_test.go:282: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:282
+            	Error:      	Not same: 
+            	            	expected: 0x776ab179a6c0 &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1702380), InitResreq:(*api.Resource)(0x776ab1702380), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:true, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab1318228), Pod:(*v1.Pod)(0x776ab17bc008), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	            	actual  : 0x776ab180a120 &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1300480), InitResreq:(*api.Resource)(0x776ab1300480), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:true, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab1044a98), Pod:(*v1.Pod)(0x776ab17bc508), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	Test:       	TestSchedulerCache_SyncTask/PodGroup_replacement_while_GET_is_in_flight_is_preserved
+    --- FAIL: TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved (0.00s)
+        synctask_test.go:253: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:253
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved
+        synctask_test.go:279: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:279
+            	Error:      	Not equal: 
+            	            	expected: 8
+            	            	actual  : 1
+            	Test:       	TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved
+        synctask_test.go:280: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:280
+            	Error:      	Not equal: 
+            	            	expected: "node"
+            	            	actual  : ""
+            	            	
+            	            	Diff:
+            	            	--- Expected
+            	            	+++ Actual
+            	            	@@ -1 +1 @@
+            	            	-node
+            	            	+
+            	Test:       	TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved
+        synctask_test.go:282: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:282
+            	Error:      	Not same: 
+            	            	expected: 0x776ab180aea0 &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1300e00), InitResreq:(*api.Resource)(0x776ab1300e00), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"node", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:8}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:false, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab13182b8), Pod:(*v1.Pod)(0x776ab1894008), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	            	actual  : 0x776ab179b560 &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab1702680), InitResreq:(*api.Resource)(0x776ab1702680), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:false, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab1318300), Pod:(*v1.Pod)(0x776ab17bcf08), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	Test:       	TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved
+        synctask_test.go:284: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:284
+            	Error:      	map[api.TaskID]*api.TaskInfo{} does not contain "test/worker"
+            	Test:       	TestSchedulerCache_SyncTask/binding_changes_on_the_same_task_pointer_are_preserved
+    --- FAIL: TestSchedulerCache_SyncTask/GET_of_a_replacement_UID_is_not_added_under_the_old_task_key (0.00s)
+        synctask_test.go:272: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:272
+            	Error:      	api.TasksMap{"replacement":(*api.TaskInfo)(0x776ab1750ea0)} should not contain "replacement"
+            	Test:       	TestSchedulerCache_SyncTask/GET_of_a_replacement_UID_is_not_added_under_the_old_task_key
+W1121 16:35:42.563448   44180 job_info.go:821] failed to find task <test/worker> in job </>
+E1121 16:35:42.563617   44180 cache.go:1415] "Failed to sync task, retry it" err="failed to get Pod <test/worker>: err try again" namespace="test" name="worker"
+--- FAIL: TestSchedulerCache_ProcessResyncTask (0.00s)
+    --- FAIL: TestSchedulerCache_ProcessResyncTask/concurrent_update_retries_and_preserves_binding_cleanup (0.00s)
+        synctask_test.go:377: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:377
+            	Error:      	Not equal: 
+            	            	expected: 1
+            	            	actual  : 0
+            	Test:       	TestSchedulerCache_ProcessResyncTask/concurrent_update_retries_and_preserves_binding_cleanup
+        synctask_test.go:389: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:389
+            	Error:      	Not equal: 
+            	            	expected: "2"
+            	            	actual  : "1"
+            	            	
+            	            	Diff:
+            	            	--- Expected
+            	            	+++ Actual
+            	            	@@ -1 +1 @@
+            	            	-2
+            	            	+1
+            	Test:       	TestSchedulerCache_ProcessResyncTask/concurrent_update_retries_and_preserves_binding_cleanup
+        synctask_test.go:390: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:390
+            	Error:      	Should be false
+            	Test:       	TestSchedulerCache_ProcessResyncTask/concurrent_update_retries_and_preserves_binding_cleanup
+    --- FAIL: TestSchedulerCache_ProcessResyncTask/replacement_UID_still_runs_cleanup_for_the_old_binding_attempt (0.00s)
+        synctask_test.go:383: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:383
+            	Error:      	api.TasksMap{"replacement":(*api.TaskInfo)(0x776ab0fec7e0)} should not contain "replacement"
+            	Test:       	TestSchedulerCache_ProcessResyncTask/replacement_UID_still_runs_cleanup_for_the_old_binding_attempt
+    --- FAIL: TestSchedulerCache_ProcessResyncTask/task_deleted_during_GET_is_forgotten_and_preserves_binding_cleanup (0.00s)
+        synctask_test.go:381: 
+            	Error Trace:	/private/tmp/volcano-synctask-final-red-20261121.u7kM3V/pkg/scheduler/cache/synctask_test.go:381
+            	Error:      	Expected nil, but got: &api.TaskInfo{UID:"test-worker", Job:"test/workers", Name:"worker", Namespace:"test", TaskRole:"", Resreq:(*api.Resource)(0x776ab168ba00), InitResreq:(*api.Resource)(0x776ab168ba00), DRAResreq:map[string]*api.DRAResource(nil), ResourceClaimKeys:[]string(nil), ResourceClaimDRAResreq:map[string]map[string]*api.DRAResource(nil), TransactionContext:api.TransactionContext{NodeName:"", EvictionOccurred:false, JobAllocatedHyperNode:"", Status:1}, LastTransaction:(*api.TransactionContext)(nil), Priority:1, VolumeReady:false, Preemptable:true, BestEffort:false, HasRestartableInitContainer:false, SchGated:true, RevocableZone:"", NumaInfo:(*api.TopologyInfo)(0x776ab10451b8), Pod:(*v1.Pod)(0x776ab1624a08), PodAnnotations:map[string]string{"scheduling.k8s.io/group-name":"workers"}, CustomBindErrHandler:(func() error)(nil), CustomBindErrHandlerSucceeded:false}
+            	Test:       	TestSchedulerCache_ProcessResyncTask/task_deleted_during_GET_is_forgotten_and_preserves_binding_cleanup
+FAIL
+FAIL	volcano.sh/volcano/pkg/scheduler/cache	91.401s
+FAIL

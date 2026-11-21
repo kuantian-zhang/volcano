@@ -1,0 +1,12 @@
+hack/verify-gofmt.sh
+hack/verify-gencode.sh
+hack/../hack
+Generating deepcopy funcs
+Generating clientset for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/clientset
+Generating listers for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/listers
+Generating informers for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/informers
+Generating deepcopy funcs
+Generating conversions
+diffing hack/../pkg against freshly generated codegen
+hack/../pkg up to date.
+#hack/verify-vendor-licenses.sh

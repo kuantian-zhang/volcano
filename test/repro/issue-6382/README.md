@@ -279,3 +279,9 @@ contained the same ordered conflict/retry/success sequence. The final `r03`
 driver explicitly waits for that sequence to remove a possible premature
 post-release observation from the fixture itself. The table above reports only
 the final driver version's one completed run.
+
+## Validation report
+
+See [the complete check report](checks/RESULTS.md), including the original
+Linux 161-package result (160 pass, one unmodified baseline-flaky eBPF failure),
+cache/race results, lint, generation checks, and baseline RED evidence.

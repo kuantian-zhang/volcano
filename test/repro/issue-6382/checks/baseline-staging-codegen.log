@@ -1,0 +1,10 @@
+hack/../hack
+Generating deepcopy code for 11 targets
+Generating defaulter code for 2 targets
+Generating conversion code for 2 targets
+Generating applyconfig code for 10 targets
+Generating client code for 10 targets
+Generating lister code for 10 targets
+Generating informer code for 10 targets
+diffing hack/../pkg against freshly generated codegen
+hack/../pkg up to date.

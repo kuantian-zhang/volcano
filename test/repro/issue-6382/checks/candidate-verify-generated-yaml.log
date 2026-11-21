@@ -1,0 +1,4 @@
+./hack/check-generated-yaml.sh
+Comparing volcano yaml (latest)
+Comparing volcano-agent yaml (latest)
+All yaml files are consistent

@@ -1,0 +1,253 @@
+go clean -testcache
+if [ darwin = 'darwin' ];then\
+		go list ./... | grep -v "/e2e" | GOOS=darwin xargs go test;\
+	else\
+		go test -p 8 -race $(find pkg cmd -type f -name '*_test.go' | sed -r 's|/[^/]+$||' | sort | uniq | sed "s|^|volcano.sh/volcano/|");\
+	fi;
+go: downloading sigs.k8s.io/e2e-framework v0.7.0
+go: downloading github.com/containernetworking/cni v1.3.0
+go: downloading github.com/opencontainers/cgroups v0.0.8
+go: downloading github.com/vishvananda/netlink v1.3.1
+go: downloading golang.org/x/crypto v0.56.0
+go: downloading github.com/prometheus/prometheus v0.311.3
+go: downloading k8s.io/pod-security-admission v0.37.1
+go: downloading k8s.io/kubectl v0.37.1
+go: downloading github.com/agiledragon/gomonkey/v2 v2.14.1
+go: downloading k8s.io/cri-client v0.37.1
+go: downloading github.com/vishvananda/netns v0.0.5
+go: downloading k8s.io/kubelet v0.37.1
+go: downloading github.com/cyphar/filepath-securejoin v0.7.0
+go: downloading github.com/godbus/dbus/v5 v5.2.2
+go: downloading google.golang.org/grpc v1.82.1
+go: downloading k8s.io/streaming v0.37.1
+go: downloading k8s.io/cri-api v0.37.1
+go: downloading go.etcd.io/etcd/client/pkg/v3 v3.7.0
+go: downloading github.com/opencontainers/selinux v1.15.1
+go: downloading k8s.io/mount-utils v0.37.1
+go: downloading go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.68.0
+go: downloading github.com/container-storage-interface/spec v1.12.1-0.20260720052920-cd9e7ad1ae09
+go: downloading k8s.io/cli-runtime v0.37.1
+go: downloading go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.69.0
+go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.44.0
+go: downloading sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
+go: downloading k8s.io/cri-streaming v0.37.1
+go: downloading go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful v0.69.0
+go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.45.0
+go: downloading github.com/containerd/containerd/api v1.11.1
+go: downloading github.com/containerd/ttrpc v1.2.9
+go: downloading k8s.io/kms v0.37.1
+go: downloading go.etcd.io/etcd/client/v3 v3.7.0
+go: downloading go.etcd.io/etcd/api/v3 v3.7.0
+go: downloading go.opentelemetry.io/proto/otlp v1.11.0
+go: downloading github.com/grpc-ecosystem/grpc-gateway/v2 v2.29.0
+# volcano.sh/volcano/cmd/agent
+package volcano.sh/volcano/pkg/agent/events/handlers/cpuqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/cpuqos
+# volcano.sh/volcano/cmd/agent
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqos
+# volcano.sh/volcano/cmd/agent
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqosv2
+# volcano.sh/volcano/cmd/agent
+package volcano.sh/volcano/pkg/agent/events/handlers/networkqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/networkqos
+FAIL	volcano.sh/volcano/cmd/agent [setup failed]
+# volcano.sh/volcano/cmd/agent/app
+package volcano.sh/volcano/pkg/agent/events/handlers/cpuqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/cpuqos
+# volcano.sh/volcano/cmd/agent/app
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqos
+# volcano.sh/volcano/cmd/agent/app
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqosv2
+# volcano.sh/volcano/cmd/agent/app
+package volcano.sh/volcano/pkg/agent/events/handlers/networkqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/networkqos
+FAIL	volcano.sh/volcano/cmd/agent/app [setup failed]
+# volcano.sh/volcano/pkg/agent/events
+package volcano.sh/volcano/pkg/agent/events/handlers/cpuqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/cpuqos
+# volcano.sh/volcano/pkg/agent/events
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqos
+# volcano.sh/volcano/pkg/agent/events
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqosv2
+# volcano.sh/volcano/pkg/agent/events
+package volcano.sh/volcano/pkg/agent/events/handlers/networkqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/networkqos
+FAIL	volcano.sh/volcano/pkg/agent/events [setup failed]
+# volcano.sh/volcano/pkg/agent/events/handlers/cpuqos
+package volcano.sh/volcano/pkg/agent/events/handlers/cpuqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/cpuqos
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/cpuqos [setup failed]
+# volcano.sh/volcano/pkg/agent/events/handlers/memoryqos
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqos
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/memoryqos [setup failed]
+# volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2
+package volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/memoryqosv2
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/memoryqosv2 [setup failed]
+# volcano.sh/volcano/pkg/agent/events/handlers/networkqos
+package volcano.sh/volcano/pkg/agent/events/handlers/networkqos: build constraints exclude all Go files in /private/tmp/volcano-6382-checks/validation/pkg/agent/events/handlers/networkqos
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/networkqos [setup failed]
+# github.com/opencontainers/cgroups
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/cgroups.go:22:36: undefined: Resources
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/cgroups.go:23:36: undefined: Resources
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/cgroups.go:51:15: undefined: FreezerState
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/cgroups.go:63:9: undefined: Resources
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/cgroups.go:79:21: undefined: FreezerState
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:110:19: undefined: unix.Openat2
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:110:50: undefined: unix.OpenHow
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:111:35: undefined: unix.O_PATH
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:132:23: undefined: unix.RESOLVE_BENEATH
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:132:46: undefined: unix.RESOLVE_NO_MAGICLINKS
+/Users/kuantian/go/pkg/mod/github.com/opencontainers/cgroups@v0.0.8/file.go:132:46: too many errors
+ok  	volcano.sh/volcano/benchmark/testcases/gang	1.787s
+ok  	volcano.sh/volcano/benchmark/testcases/pod	2.590s
+?   	volcano.sh/volcano/benchmark/testcases/util	[no test files]
+FAIL	volcano.sh/volcano/cmd/agent/app/options [build failed]
+?   	volcano.sh/volcano/cmd/agent-scheduler	[no test files]
+?   	volcano.sh/volcano/cmd/agent-scheduler/app	[no test files]
+ok  	volcano.sh/volcano/cmd/agent-scheduler/app/options	6.870s
+?   	volcano.sh/volcano/cmd/cli	[no test files]
+?   	volcano.sh/volcano/cmd/cli/util	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vcancel	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vjobs	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vqueues	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vresume	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vsub	[no test files]
+?   	volcano.sh/volcano/cmd/cli/vsuspend	[no test files]
+?   	volcano.sh/volcano/cmd/controller-manager	[no test files]
+ok  	volcano.sh/volcano/cmd/controller-manager/app	0.861s
+ok  	volcano.sh/volcano/cmd/controller-manager/app/options	1.850s
+?   	volcano.sh/volcano/cmd/hypernode-controller-manager	[no test files]
+ok  	volcano.sh/volcano/cmd/hypernode-controller-manager/app	1.153s
+ok  	volcano.sh/volcano/cmd/hypernode-controller-manager/app/options	5.334s
+?   	volcano.sh/volcano/cmd/network-qos	[no test files]
+ok  	volcano.sh/volcano/cmd/network-qos/cni	9.988s
+ok  	volcano.sh/volcano/cmd/network-qos/tools	15.754s
+ok  	volcano.sh/volcano/cmd/network-qos/tools/options	17.072s
+?   	volcano.sh/volcano/cmd/scheduler	[no test files]
+?   	volcano.sh/volcano/cmd/scheduler/app	[no test files]
+ok  	volcano.sh/volcano/cmd/scheduler/app/options	20.522s
+?   	volcano.sh/volcano/cmd/webhook-manager	[no test files]
+?   	volcano.sh/volcano/cmd/webhook-manager/app	[no test files]
+ok  	volcano.sh/volcano/cmd/webhook-manager/app/options	3.711s
+?   	volcano.sh/volcano/example/custom-plugin	[no test files]
+?   	volcano.sh/volcano/example/extender	[no test files]
+?   	volcano.sh/volcano/example/kubecon-2019-china/scripts	[no test files]
+?   	volcano.sh/volcano/pkg/agent/apis	[no test files]
+ok  	volcano.sh/volcano/pkg/agent/apis/extension	2.896s
+FAIL	volcano.sh/volcano/pkg/agent/config [build failed]
+ok  	volcano.sh/volcano/pkg/agent/config/api	5.578s
+FAIL	volcano.sh/volcano/pkg/agent/config/source [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/config/utils [build failed]
+?   	volcano.sh/volcano/pkg/agent/events/framework	[no test files]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/base [build failed]
+?   	volcano.sh/volcano/pkg/agent/events/handlers/cpuburst	[no test files]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/cputhrottle [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/eviction [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/oversubscription [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/handlers/resources [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/probes [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/probes/nodemonitor [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/probes/noderesources [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/events/probes/pods [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/features [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/healthcheck [build failed]
+?   	volcano.sh/volcano/pkg/agent/metrics	[no test files]
+FAIL	volcano.sh/volcano/pkg/agent/oversubscription/policy [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/oversubscription/policy/extend [build failed]
+?   	volcano.sh/volcano/pkg/agent/oversubscription/queue	[no test files]
+ok  	volcano.sh/volcano/pkg/agent/utils	11.114s
+FAIL	volcano.sh/volcano/pkg/agent/utils/cgroup [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/utils/eviction [build failed]
+?   	volcano.sh/volcano/pkg/agent/utils/exec	[no test files]
+?   	volcano.sh/volcano/pkg/agent/utils/exec/mocks	[no test files]
+?   	volcano.sh/volcano/pkg/agent/utils/file	[no test files]
+FAIL	volcano.sh/volcano/pkg/agent/utils/node [build failed]
+FAIL	volcano.sh/volcano/pkg/agent/utils/pod [build failed]
+?   	volcano.sh/volcano/pkg/agent/utils/testing	[no test files]
+ok  	volcano.sh/volcano/pkg/agent/utils/version	12.064s
+ok  	volcano.sh/volcano/pkg/agentscheduler	5.344s
+?   	volcano.sh/volcano/pkg/agentscheduler/actions	[no test files]
+ok  	volcano.sh/volcano/pkg/agentscheduler/actions/allocate	32.052s
+?   	volcano.sh/volcano/pkg/agentscheduler/api	[no test files]
+ok  	volcano.sh/volcano/pkg/agentscheduler/cache	50.163s
+?   	volcano.sh/volcano/pkg/agentscheduler/framework	[no test files]
+?   	volcano.sh/volcano/pkg/agentscheduler/metrics	[no test files]
+?   	volcano.sh/volcano/pkg/agentscheduler/plugins	[no test files]
+?   	volcano.sh/volcano/pkg/agentscheduler/plugins/nodeorder	[no test files]
+ok  	volcano.sh/volcano/pkg/agentscheduler/plugins/predicates	48.444s
+?   	volcano.sh/volcano/pkg/agentscheduler/uthelper	[no test files]
+ok  	volcano.sh/volcano/pkg/cli/job	34.681s
+ok  	volcano.sh/volcano/pkg/cli/jobflow	37.210s
+ok  	volcano.sh/volcano/pkg/cli/jobtemplate	32.057s
+ok  	volcano.sh/volcano/pkg/cli/pod	36.037s
+?   	volcano.sh/volcano/pkg/cli/podgroup	[no test files]
+ok  	volcano.sh/volcano/pkg/cli/queue	33.405s
+ok  	volcano.sh/volcano/pkg/cli/util	38.170s
+ok  	volcano.sh/volcano/pkg/cli/vcancel	30.745s
+?   	volcano.sh/volcano/pkg/cli/vjobs	[no test files]
+?   	volcano.sh/volcano/pkg/cli/vqueues	[no test files]
+ok  	volcano.sh/volcano/pkg/cli/vresume	13.614s
+?   	volcano.sh/volcano/pkg/cli/vsub	[no test files]
+ok  	volcano.sh/volcano/pkg/cli/vsuspend	11.396s
+FAIL	volcano.sh/volcano/pkg/config [build failed]
+ok  	volcano.sh/volcano/pkg/controllers/apis	11.732s
+ok  	volcano.sh/volcano/pkg/controllers/cache	11.977s
+ok  	volcano.sh/volcano/pkg/controllers/colocationconfig	11.854s
+ok  	volcano.sh/volcano/pkg/controllers/cronjob	16.030s
+?   	volcano.sh/volcano/pkg/controllers/framework	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/garbagecollector	20.500s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode	30.196s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/api	32.621s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/config	39.181s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery	48.399s
+?   	volcano.sh/volcano/pkg/controllers/hypernode/discovery/fake	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery/label	55.631s
+ok  	volcano.sh/volcano/pkg/controllers/hypernode/discovery/ufm	64.230s
+?   	volcano.sh/volcano/pkg/controllers/hypernode/utils	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/job	88.912s
+ok  	volcano.sh/volcano/pkg/controllers/job/helpers	96.386s
+?   	volcano.sh/volcano/pkg/controllers/job/plugins	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/hcclrank	99.028s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/mpi	99.864s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/pytorch	103.148s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/ray	112.662s
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/distributed-framework/tensorflow	118.172s
+?   	volcano.sh/volcano/pkg/controllers/job/plugins/env	[no test files]
+?   	volcano.sh/volcano/pkg/controllers/job/plugins/interface	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/job/plugins/ssh	117.241s
+?   	volcano.sh/volcano/pkg/controllers/job/plugins/svc	[no test files]
+?   	volcano.sh/volcano/pkg/controllers/job/state	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/jobflow	76.305s
+ok  	volcano.sh/volcano/pkg/controllers/jobflow/state	83.431s
+ok  	volcano.sh/volcano/pkg/controllers/jobtemplate	87.804s
+ok  	volcano.sh/volcano/pkg/controllers/metrics	90.683s
+ok  	volcano.sh/volcano/pkg/controllers/namespacequeue	98.855s
+ok  	volcano.sh/volcano/pkg/controllers/podgroup	52.432s
+ok  	volcano.sh/volcano/pkg/controllers/queue	59.452s
+ok  	volcano.sh/volcano/pkg/controllers/queue/state	57.549s
+ok  	volcano.sh/volcano/pkg/controllers/sharding	69.315s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy	59.502s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/allocationrate	61.708s
+?   	volcano.sh/volcano/pkg/controllers/sharding/policy/builtin	[no test files]
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/nodelimit	65.438s
+ok  	volcano.sh/volcano/pkg/controllers/sharding/policy/warmup	51.972s
+ok  	volcano.sh/volcano/pkg/controllers/util	55.078s
+?   	volcano.sh/volcano/pkg/features	[no test files]
+ok  	volcano.sh/volcano/pkg/filewatcher	47.734s
+?   	volcano.sh/volcano/pkg/kube	[no test files]
+FAIL	volcano.sh/volcano/pkg/metriccollect [build failed]
+FAIL	volcano.sh/volcano/pkg/metriccollect/framework [build failed]
+FAIL	volcano.sh/volcano/pkg/metriccollect/local [build failed]
+FAIL	volcano.sh/volcano/pkg/metriccollect/testing [build failed]
+FAIL	volcano.sh/volcano/pkg/networkqos [build failed]
+?   	volcano.sh/volcano/pkg/networkqos/api	[no test files]
+ok  	volcano.sh/volcano/pkg/networkqos/cni	38.965s
+?   	volcano.sh/volcano/pkg/networkqos/cni/mocks	[no test files]
+?   	volcano.sh/volcano/pkg/networkqos/tc	[no test files]
+?   	volcano.sh/volcano/pkg/networkqos/tc/mocks	[no test files]
+ok  	volcano.sh/volcano/pkg/networkqos/throttling	37.492s
+?   	volcano.sh/volcano/pkg/networkqos/throttling/mocks	[no test files]
+ok  	volcano.sh/volcano/pkg/networkqos/utils	37.623s
+ok  	volcano.sh/volcano/pkg/networkqos/utils/ebpf	30.856s
+?   	volcano.sh/volcano/pkg/networkqos/utils/ebpf/mocks	[no test files]
+FAIL	volcano.sh/volcano/pkg/resourceusage [build failed]
+ok  	volcano.sh/volcano/pkg/scheduler	3.133s
+?   	volcano.sh/volcano/pkg/scheduler/actions	[no test files]
+ok  	volcano.sh/volcano/pkg/scheduler/actions/allocate	36.749s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/backfill	6.943s
+ok  	volcano.sh/volcano/pkg/scheduler/actions/enqueue	39.006s
+make: *** [unit-test] Terminated: 15

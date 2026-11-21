@@ -1,0 +1,17 @@
+hack/verify-gofmt.sh
+hack/verify-gencode.sh
+hack/../hack
+go: downloading k8s.io/code-generator v0.37.1
+go: downloading k8s.io/gengo/v2 v2.0.0-20260408192533-25e2208e0dc3
+go: downloading golang.org/x/text v0.40.0
+go: downloading golang.org/x/tools v0.47.0
+go: downloading golang.org/x/mod v0.37.0
+Generating deepcopy funcs
+Generating clientset for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/clientset
+Generating listers for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/listers
+Generating informers for batch:v1alpha1 bus:v1alpha1 scheduling:v1beta1 at volcano.sh/apis/pkg/client/informers
+Generating deepcopy funcs
+Generating conversions
+diffing hack/../pkg against freshly generated codegen
+hack/../pkg up to date.
+#hack/verify-vendor-licenses.sh

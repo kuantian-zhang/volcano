@@ -1,0 +1,211 @@
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: *errors.errorString(&errors.errorString{s:"mkdir failed"})
+        	            	actual  : <nil>(<nil>)
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	make dir failed%!(EXTRA <nil>)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000aa720)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000aa940)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000aab60)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000aad80)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000aafa0)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000ab1c0)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000ab3e0)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000ab600)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+--- FAIL: TestCreateAndPinArrayMap (0.00s)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: <nil>(<nil>)
+        	            	actual  : *fmt.wrapError(&fmt.wrapError{msg:"creating map: load pinned map: operation not permitted", err:(*fmt.wrapError)(0xc0000ab7a0)})
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	create map successfully%!(EXTRA *fmt.wrapError=creating map: load pinned map: operation not permitted)
+    map_test.go:77: 
+        	Error Trace:	/checks/baseline-pristine/pkg/networkqos/utils/ebpf/map_test.go:77
+        	Error:      	Not equal: 
+        	            	expected: &errors.errorString{s:"new map failed"}
+        	            	actual  : &errors.errorString{s:"mkdir failed"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (*errors.errorString)({
+        	            	- s: (string) (len=14) "new map failed"
+        	            	+ s: (string) (len=12) "mkdir failed"
+        	            	 })
+        	Test:       	TestCreateAndPinArrayMap
+        	Messages:   	new map failed%!(EXTRA *errors.errorString=mkdir failed)
+FAIL
+FAIL	volcano.sh/volcano/pkg/networkqos/utils/ebpf	0.010s
+FAIL
