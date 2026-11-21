@@ -1,0 +1,3 @@
+{"event":"get_response","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"563","time":"2026-11-21T08:56:52.737273Z","uid":"83393811-378d-4844-abee-363d09e0d5b9"}
+{"event":"get_captured","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"563","time":"2026-11-21T08:56:52.73731Z","uid":"83393811-378d-4844-abee-363d09e0d5b9"}
+{"event":"get_released","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"563","time":"2026-11-21T08:56:53.723891Z","uid":"83393811-378d-4844-abee-363d09e0d5b9"}

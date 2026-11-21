@@ -1,0 +1,97 @@
+I1121 16:56:59.702045   52711 cache.go:657] no registered bind method, new a default one
+I1121 16:56:59.726365   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:56:59.737895   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:56:59.737945   52711 event_handlers.go:297] PVC for pod <volcano-6382-patched-r03/worker> not yet in informer cache, add task and retry: looking up PVC volcano-6382-patched-r03/scratch: persistentvolumeclaim "scratch" not found
+I1121 16:56:59.737966   52711 event_handlers.go:615] Added pod <volcano-6382-patched-r03/worker> into cache.
+I1121 16:56:59.835625   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:56:59.838335   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:56:59.838695   52711 overcommit.go:126] Sufficient resources, permit job <volcano-6382-patched-r03/workers> to be inqueue
+I1121 16:56:59.838784   52711 allocate.go:318] Task <volcano-6382-patched-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:59.848512   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:56:59.848560   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:57:00.050611   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.051345   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:00.051561   52711 allocate.go:318] Task <volcano-6382-patched-r03/worker> has external scheduling gate, skip it.
+I1121 16:57:00.113692   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:00.113712   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:00.113784   52711 event_handlers.go:640] Updated pod <volcano-6382-patched-r03/worker> in cache.
+I1121 16:57:00.145021   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.252947   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.253291   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:00.253516   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:00.253551   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:00.253580   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:00.253705   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:00.272165   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:57:00.272202   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:57:00.272655   52711 cache.go:1227] Updating pod condition for volcano-6382-patched-r03/worker to (PodScheduled==False)
+I1121 16:57:00.283019   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:00.283052   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:00.283085   52711 event_handlers.go:640] Updated pod <volcano-6382-patched-r03/worker> in cache.
+I1121 16:57:00.483704   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.484398   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:00.484792   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:00.484877   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:00.484907   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:00.484963   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:00.485175   52711 cache.go:1252] task unscheduleable volcano-6382-patched-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+I1121 16:57:00.557193   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.686914   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.687827   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:00.688355   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:00.688514   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:00.688539   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:00.688613   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:00.688907   52711 cache.go:1252] task unscheduleable volcano-6382-patched-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+E1121 16:57:00.765884   52711 cache.go:1415] "Failed to sync task, retry it" err="task changed during resync" namespace="volcano-6382-patched-r03" name="worker"
+I1121 16:57:00.786056   52711 cache.go:1419] Successfully synced task <volcano-6382-patched-r03/worker>
+I1121 16:57:00.890977   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:00.898207   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:00.898938   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:00.899242   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:00.899276   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:00.899416   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:00.900458   52711 cache.go:1252] task unscheduleable volcano-6382-patched-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+I1121 16:57:00.972591   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.100869   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.101242   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:01.101436   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:01.101472   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:01.101489   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:01.101530   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:01.101647   52711 cache.go:1252] task unscheduleable volcano-6382-patched-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+I1121 16:57:01.303187   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.303535   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:01.303687   52711 allocate.go:244] Added Job <volcano-6382-patched-r03/workers> into Queue <default> in regular phase
+I1121 16:57:01.303714   52711 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-patched-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:57:01.303724   52711 allocate.go:1006] There are <1> nodes for Job <volcano-6382-patched-r03/workers>
+I1121 16:57:01.303760   52711 predicate_helper.go:92] Considering Task <volcano-6382-patched-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:57:01.303812   52711 allocate.go:1249] Binding Task <volcano-6382-patched-r03/worker> to node <volcano-6382-control-plane>
+I1121 16:57:01.303822   52711 statement.go:289] After allocated Task <volcano-6382-patched-r03/worker> to Node <volcano-6382-control-plane>: idle <cpu 950.00, memory 3450048512.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 100.00>, used <cpu 1050.00, memory 337641472.00, pods 10.00>, releasing <cpu 0.00, memory 0.00>
+I1121 16:57:01.303833   52711 drf.go:420] [drf] AllocateFunc: task <volcano-6382-patched-r03/worker>, resreq <cpu 100.00, memory 33554432.00, pods 1.00>, share <0.05>, namespace share <-1>
+I1121 16:57:01.303886   52711 binder.go:405] "AssumePodVolumes" pod="volcano-6382-patched-r03/worker" node="volcano-6382-control-plane"
+I1121 16:57:01.303924   52711 predicates.go:872] predicates, update pod volcano-6382-patched-r03/worker allocate to node [volcano-6382-control-plane]
+I1121 16:57:01.303932   52711 proportion.go:518] [proportion] AllocateFunc: task <volcano-6382-patched-r03/worker>, resreq <cpu 100.00, memory 33554432.00, pods 1.00>, share <1>
+I1121 16:57:01.303955   52711 allocate.go:1098] "SubJob ready, return statement" job="volcano-6382-patched-r03/workers" subJob="volcano-6382-patched-r03/workers"
+I1121 16:57:01.307508   52711 binder.go:479] "BindPodVolumes" pod="volcano-6382-patched-r03/worker" node="volcano-6382-control-plane"
+I1121 16:57:01.317882   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:57:01.317900   52711 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-patched-r03/workers
+I1121 16:57:01.320981   52711 binder.go:555] "Updated PersistentVolume with claim. Waiting for binding to complete" pod="volcano-6382-patched-r03/worker" PV="volcano-6382-patched-r03" PVC="volcano-6382-patched-r03/scratch"
+I1121 16:57:01.532697   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.533381   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:01.734792   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.735390   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:01.936790   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:01.937259   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:02.137940   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:02.138260   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:02.322107   52711 binder.go:718] "All PVCs for pod are bound" pod="volcano-6382-patched-r03/worker"
+I1121 16:57:02.339177   52711 cache.go:1700] The priority of job <volcano-6382-patched-r03/workers> is </0>
+I1121 16:57:02.339737   52711 proportion.go:110] Considering Job <volcano-6382-patched-r03/workers>.
+I1121 16:57:02.344553   52711 cache.go:1116] bind ok, latency 22.309292ms
+I1121 16:57:02.350217   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:02.350305   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:02.350410   52711 event_handlers.go:640] Updated pod <volcano-6382-patched-r03/worker> in cache.
+I1121 16:57:02.390792   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:02.390815   52711 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-patched-r03/worker
+I1121 16:57:02.390872   52711 event_handlers.go:640] Updated pod <volcano-6382-patched-r03/worker> in cache.

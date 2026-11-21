@@ -1,0 +1,9 @@
+{
+  "apiVersion": "storage.k8s.io/v1",
+  "kind": "StorageClass",
+  "metadata": {
+    "name": "volcano-6382-patched-r03"
+  },
+  "provisioner": "kubernetes.io/no-provisioner",
+  "volumeBindingMode": "WaitForFirstConsumer"
+}

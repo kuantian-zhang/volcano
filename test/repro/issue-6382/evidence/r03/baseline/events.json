@@ -1,0 +1,133 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-21T08:56:53Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "scratch",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "570",
+                "uid": "abef0f52-93f1-4b62-aec6-cb59de95525a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-21T08:56:53Z",
+            "message": "waiting for pod worker to be scheduled",
+            "metadata": {
+                "creationTimestamp": "2026-11-21T08:56:53Z",
+                "name": "scratch.18ea03a60fe5d680",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "571",
+                "uid": "663d29c4-98c1-4b37-973e-fa5f4b5a0e6f"
+            },
+            "reason": "WaitForPodScheduled",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-21T08:56:53Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "worker",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "573",
+                "uid": "83393811-378d-4844-abee-363d09e0d5b9"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-21T08:56:53Z",
+            "message": "Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector.",
+            "metadata": {
+                "creationTimestamp": "2026-11-21T08:56:53Z",
+                "name": "worker.18ea03a6116ecec8",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "577",
+                "uid": "ee5e67ed-6b68-41a7-aa4f-1cb17ff6b398"
+            },
+            "reason": "FailedScheduling",
+            "reportingComponent": "volcano-6382-baseline-r03",
+            "reportingInstance": "",
+            "source": {
+                "component": "volcano-6382-baseline-r03"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 22,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-21T08:56:52Z",
+            "involvedObject": {
+                "apiVersion": "scheduling.volcano.sh/v1beta1",
+                "kind": "PodGroup",
+                "name": "workers",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "564",
+                "uid": "095996e8-070c-4828-a732-e61596cf9498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-21T08:56:57Z",
+            "message": "1/1 tasks in gang unschedulable: pod group is not ready, 1 Pending, 1 minAvailable; Pending: 1 Unschedulable",
+            "metadata": {
+                "creationTimestamp": "2026-11-21T08:56:53Z",
+                "name": "workers.18ea03a5f8711660",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "607",
+                "uid": "91ceb910-ff95-43f9-878b-93b06ff4cffe"
+            },
+            "reason": "Unschedulable",
+            "reportingComponent": "volcano-6382-baseline-r03",
+            "reportingInstance": "",
+            "source": {
+                "component": "volcano-6382-baseline-r03"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-21T08:56:53Z",
+            "involvedObject": {
+                "apiVersion": "scheduling.volcano.sh/v1beta1",
+                "kind": "PodGroup",
+                "name": "workers",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "574",
+                "uid": "095996e8-070c-4828-a732-e61596cf9498"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-21T08:56:53Z",
+            "message": "1/1 tasks in gang unschedulable: pod group is not ready, 1 Pending, 1 minAvailable; Pending: 1 Unschedulable. Node: worker: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector.",
+            "metadata": {
+                "creationTimestamp": "2026-11-21T08:56:53Z",
+                "name": "workers.18ea03a6116c6598",
+                "namespace": "volcano-6382-baseline-r03",
+                "resourceVersion": "580",
+                "uid": "64ffdfd4-a756-4d2f-bef6-c57352a13b66"
+            },
+            "reason": "Unschedulable",
+            "reportingComponent": "volcano-6382-baseline-r03",
+            "reportingInstance": "",
+            "source": {
+                "component": "volcano-6382-baseline-r03"
+            },
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

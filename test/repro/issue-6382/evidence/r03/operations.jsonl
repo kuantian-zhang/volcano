@@ -1,0 +1,23 @@
+{"time": "2026-11-21T08:56:51.932651+00:00", "event": "environment", "context": "kind-volcano-6382", "serverVersion": {"major": "1", "minor": "34", "emulationMajor": "1", "emulationMinor": "34", "minCompatibilityMajor": "1", "minCompatibilityMinor": "33", "gitVersion": "v1.34.3", "gitCommit": "df11db1c0f08fab3c0baee1e5ce6efbf816af7f1", "gitTreeState": "clean", "buildDate": "2025-12-09T14:59:13Z", "goVersion": "go1.24.11", "compiler": "gc", "platform": "linux/arm64"}, "repoCommit": "c5fb5be058db81c35351dd44c7334e8530976aaf", "repoStatus": "", "binarySHA256": {"baseline": "92529ed357413d025d50e22464f179fba7070c1e9de4f3708b3d570808c411d6", "patched": "79255afc45e71aa0a36ca96f95feac87ea503fcd5d329e3371e1bf176e86a3c5", "relay": "74b0f4262a94dd2e9598b8226db8082501e6c457ac7fb7c76542ac4ba78a6129"}}
+{"time": "2026-11-21T08:56:52.100331+00:00", "event": "queue_opened", "name": "root"}
+{"time": "2026-11-21T08:56:52.236740+00:00", "event": "queue_opened", "name": "default"}
+{"time": "2026-11-21T08:56:52.300242+00:00", "event": "created", "kind": "Namespace", "name": "volcano-6382-baseline-r03"}
+{"time": "2026-11-21T08:56:52.355784+00:00", "event": "created", "kind": "StorageClass", "name": "volcano-6382-baseline-r03"}
+{"time": "2026-11-21T08:56:52.413049+00:00", "event": "created", "kind": "PersistentVolume", "name": "volcano-6382-baseline-r03"}
+{"time": "2026-11-21T08:56:52.450890+00:00", "event": "created", "kind": "PodGroup", "name": "workers"}
+{"time": "2026-11-21T08:56:52.734949+00:00", "event": "created", "kind": "Pod", "name": "worker"}
+{"time": "2026-11-21T08:56:52.941169+00:00", "event": "old_get_held", "case": "baseline", "status": {"armed": false, "held": true, "pod": {"gates": [{"name": "repro.volcano.sh/admission"}], "resourceVersion": "563", "uid": "83393811-378d-4844-abee-363d09e0d5b9"}}}
+{"time": "2026-11-21T08:56:53.042730+00:00", "event": "created", "kind": "PersistentVolumeClaim", "name": "scratch"}
+{"time": "2026-11-21T08:56:53.723019+00:00", "event": "cache_before_release", "case": "baseline", "uid": "83393811-378d-4844-abee-363d09e0d5b9", "resourceVersion": "576", "gates": [], "SchGated": false, "taskStatus": 1, "nodeName": ""}
+{"time": "2026-11-21T08:56:53.929781+00:00", "event": "cache_after_release", "case": "baseline", "uid": "83393811-378d-4844-abee-363d09e0d5b9", "resourceVersion": "563", "gates": [{"name": "repro.volcano.sh/admission"}], "SchGated": true, "taskStatus": 1, "nodeName": ""}
+{"time": "2026-11-21T08:56:59.076837+00:00", "event": "baseline_still_pending", "case": "baseline", "observationSeconds": 5}
+{"time": "2026-11-21T08:56:59.275837+00:00", "event": "created", "kind": "Namespace", "name": "volcano-6382-patched-r03"}
+{"time": "2026-11-21T08:56:59.323058+00:00", "event": "created", "kind": "StorageClass", "name": "volcano-6382-patched-r03"}
+{"time": "2026-11-21T08:56:59.377993+00:00", "event": "created", "kind": "PersistentVolume", "name": "volcano-6382-patched-r03"}
+{"time": "2026-11-21T08:56:59.414759+00:00", "event": "created", "kind": "PodGroup", "name": "workers"}
+{"time": "2026-11-21T08:56:59.735482+00:00", "event": "created", "kind": "Pod", "name": "worker"}
+{"time": "2026-11-21T08:56:59.942895+00:00", "event": "old_get_held", "case": "patched", "status": {"armed": false, "held": true, "pod": {"gates": [{"name": "repro.volcano.sh/admission"}], "resourceVersion": "617", "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7"}}}
+{"time": "2026-11-21T08:57:00.075062+00:00", "event": "created", "kind": "PersistentVolumeClaim", "name": "scratch"}
+{"time": "2026-11-21T08:57:00.763137+00:00", "event": "cache_before_release", "case": "patched", "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7", "resourceVersion": "630", "gates": [], "SchGated": false, "taskStatus": 1, "nodeName": ""}
+{"time": "2026-11-21T08:57:01.174573+00:00", "event": "cache_after_release", "case": "patched", "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7", "resourceVersion": "630", "gates": [], "SchGated": false, "taskStatus": 1, "nodeName": ""}
+{"time": "2026-11-21T08:57:02.389011+00:00", "event": "patched_pod_bound", "case": "patched", "nodeName": "volcano-6382-control-plane"}

@@ -1,0 +1,56 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "worker",
+    "namespace": "volcano-6382-patched-r03",
+    "annotations": {
+      "scheduling.k8s.io/group-name": "workers"
+    }
+  },
+  "spec": {
+    "schedulerName": "volcano-6382-patched-r03",
+    "restartPolicy": "Never",
+    "nodeSelector": {
+      "repro.volcano.sh/volcano-6382-patched-r03": "ready"
+    },
+    "tolerations": [
+      {
+        "key": "node-role.kubernetes.io/control-plane",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      }
+    ],
+    "schedulingGates": [
+      {
+        "name": "repro.volcano.sh/admission"
+      }
+    ],
+    "containers": [
+      {
+        "name": "main",
+        "image": "registry.k8s.io/pause:3.10.1",
+        "resources": {
+          "requests": {
+            "cpu": "100m",
+            "memory": "32Mi"
+          }
+        },
+        "volumeMounts": [
+          {
+            "name": "scratch",
+            "mountPath": "/scratch"
+          }
+        ]
+      }
+    ],
+    "volumes": [
+      {
+        "name": "scratch",
+        "persistentVolumeClaim": {
+          "claimName": "scratch"
+        }
+      }
+    ]
+  }
+}

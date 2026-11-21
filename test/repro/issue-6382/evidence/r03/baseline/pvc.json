@@ -1,0 +1,19 @@
+{
+  "apiVersion": "v1",
+  "kind": "PersistentVolumeClaim",
+  "metadata": {
+    "name": "scratch",
+    "namespace": "volcano-6382-baseline-r03"
+  },
+  "spec": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "storageClassName": "volcano-6382-baseline-r03",
+    "resources": {
+      "requests": {
+        "storage": "64Mi"
+      }
+    }
+  }
+}

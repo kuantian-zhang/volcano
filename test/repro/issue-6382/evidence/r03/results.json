@@ -1,0 +1,50 @@
+[
+  {
+    "case": "baseline",
+    "uid": "83393811-378d-4844-abee-363d09e0d5b9",
+    "beforeRelease": {
+      "uid": "83393811-378d-4844-abee-363d09e0d5b9",
+      "resourceVersion": "576",
+      "gates": [],
+      "SchGated": false,
+      "taskStatus": 1,
+      "nodeName": ""
+    },
+    "afterRelease": {
+      "uid": "83393811-378d-4844-abee-363d09e0d5b9",
+      "resourceVersion": "563",
+      "gates": [
+        {
+          "name": "repro.volcano.sh/admission"
+        }
+      ],
+      "SchGated": true,
+      "taskStatus": 1,
+      "nodeName": ""
+    },
+    "finalNode": "",
+    "namespace": "volcano-6382-baseline-r03"
+  },
+  {
+    "case": "patched",
+    "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+    "beforeRelease": {
+      "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+      "resourceVersion": "630",
+      "gates": [],
+      "SchGated": false,
+      "taskStatus": 1,
+      "nodeName": ""
+    },
+    "afterRelease": {
+      "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+      "resourceVersion": "630",
+      "gates": [],
+      "SchGated": false,
+      "taskStatus": 1,
+      "nodeName": ""
+    },
+    "finalNode": "volcano-6382-control-plane",
+    "namespace": "volcano-6382-patched-r03"
+  }
+]

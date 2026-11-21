@@ -1,0 +1,16 @@
+{
+  "apiVersion": "scheduling.volcano.sh/v1beta1",
+  "kind": "PodGroup",
+  "metadata": {
+    "name": "workers",
+    "namespace": "volcano-6382-patched-r03"
+  },
+  "spec": {
+    "queue": "default",
+    "minMember": 1,
+    "minResources": {
+      "cpu": "100m",
+      "memory": "32Mi"
+    }
+  }
+}

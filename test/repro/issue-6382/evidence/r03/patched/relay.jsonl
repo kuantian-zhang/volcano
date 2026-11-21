@@ -1,0 +1,4 @@
+{"event":"get_response","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"617","time":"2026-11-21T08:56:59.73954Z","uid":"62d84322-6c3d-43db-b9dc-88f07be258e7"}
+{"event":"get_captured","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"617","time":"2026-11-21T08:56:59.73959Z","uid":"62d84322-6c3d-43db-b9dc-88f07be258e7"}
+{"event":"get_released","gates":[{"name":"repro.volcano.sh/admission"}],"nodeName":"","resourceVersion":"617","time":"2026-11-21T08:57:00.765002Z","uid":"62d84322-6c3d-43db-b9dc-88f07be258e7"}
+{"event":"get_response","gates":null,"nodeName":"","resourceVersion":"630","time":"2026-11-21T08:57:00.784982Z","uid":"62d84322-6c3d-43db-b9dc-88f07be258e7"}

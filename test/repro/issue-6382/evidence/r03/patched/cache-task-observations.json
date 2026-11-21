@@ -1,0 +1,779 @@
+[
+  {
+    "source": "patched/observations/snapshot-0004.json",
+    "sourceSHA256": "3700d71725923ae4aed9a1bafcfbec328585e79fe6741ca4232232f10bc0a2c1",
+    "task": {
+      "UID": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+      "Job": "volcano-6382-patched-r03/workers",
+      "Name": "worker",
+      "Namespace": "volcano-6382-patched-r03",
+      "TaskRole": "",
+      "Resreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "InitResreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "DRAResreq": null,
+      "ResourceClaimKeys": null,
+      "ResourceClaimDRAResreq": null,
+      "NodeName": "",
+      "EvictionOccurred": false,
+      "JobAllocatedHyperNode": "",
+      "Status": 1,
+      "LastTransaction": null,
+      "Priority": 0,
+      "VolumeReady": false,
+      "Preemptable": true,
+      "BestEffort": false,
+      "HasRestartableInitContainer": false,
+      "SchGated": false,
+      "RevocableZone": "",
+      "NumaInfo": {
+        "Policy": "",
+        "ResMap": {}
+      },
+      "Pod": {
+        "metadata": {
+          "name": "worker",
+          "namespace": "volcano-6382-patched-r03",
+          "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+          "resourceVersion": "626",
+          "generation": 2,
+          "creationTimestamp": "2026-11-21T08:56:59Z",
+          "annotations": {
+            "scheduling.k8s.io/group-name": "workers"
+          },
+          "managedFields": [
+            {
+              "manager": "kubectl-create",
+              "operation": "Update",
+              "apiVersion": "v1",
+              "time": "2026-11-21T08:56:59Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:metadata": {
+                  "f:annotations": {
+                    ".": {},
+                    "f:scheduling.k8s.io/group-name": {}
+                  }
+                },
+                "f:spec": {
+                  "f:containers": {
+                    "k:{\"name\":\"main\"}": {
+                      ".": {},
+                      "f:image": {},
+                      "f:imagePullPolicy": {},
+                      "f:name": {},
+                      "f:resources": {
+                        ".": {},
+                        "f:requests": {
+                          ".": {},
+                          "f:cpu": {},
+                          "f:memory": {}
+                        }
+                      },
+                      "f:terminationMessagePath": {},
+                      "f:terminationMessagePolicy": {},
+                      "f:volumeMounts": {
+                        ".": {},
+                        "k:{\"mountPath\":\"/scratch\"}": {
+                          ".": {},
+                          "f:mountPath": {},
+                          "f:name": {}
+                        }
+                      }
+                    }
+                  },
+                  "f:dnsPolicy": {},
+                  "f:enableServiceLinks": {},
+                  "f:nodeSelector": {},
+                  "f:restartPolicy": {},
+                  "f:schedulerName": {},
+                  "f:securityContext": {},
+                  "f:terminationGracePeriodSeconds": {},
+                  "f:tolerations": {},
+                  "f:volumes": {
+                    ".": {},
+                    "k:{\"name\":\"scratch\"}": {
+                      ".": {},
+                      "f:name": {},
+                      "f:persistentVolumeClaim": {
+                        ".": {},
+                        "f:claimName": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "scratch",
+              "persistentVolumeClaim": {
+                "claimName": "scratch"
+              }
+            },
+            {
+              "name": "kube-api-access-rj8g2",
+              "projected": {
+                "sources": [
+                  {
+                    "serviceAccountToken": {
+                      "expirationSeconds": 3607,
+                      "path": "token"
+                    }
+                  },
+                  {
+                    "configMap": {
+                      "name": "kube-root-ca.crt",
+                      "items": [
+                        {
+                          "key": "ca.crt",
+                          "path": "ca.crt"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "downwardAPI": {
+                      "items": [
+                        {
+                          "path": "namespace",
+                          "fieldRef": {
+                            "apiVersion": "v1",
+                            "fieldPath": "metadata.namespace"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "main",
+              "image": "registry.k8s.io/pause:3.10.1",
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "scratch",
+                  "mountPath": "/scratch"
+                },
+                {
+                  "name": "kube-api-access-rj8g2",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "IfNotPresent"
+            }
+          ],
+          "restartPolicy": "Never",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "nodeSelector": {
+            "repro.volcano.sh/volcano-6382-patched-r03": "ready"
+          },
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "securityContext": {},
+          "schedulerName": "volcano-6382-patched-r03",
+          "tolerations": [
+            {
+              "key": "node-role.kubernetes.io/control-plane",
+              "operator": "Exists",
+              "effect": "NoSchedule"
+            },
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ],
+          "priority": 0,
+          "enableServiceLinks": true,
+          "preemptionPolicy": "PreemptLowerPriority"
+        },
+        "status": {
+          "phase": "Pending",
+          "conditions": [
+            {
+              "type": "PodScheduled",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-21T08:56:59Z",
+              "reason": "SchedulingGated",
+              "message": "Scheduling is blocked due to non-empty scheduling gates"
+            }
+          ],
+          "qosClass": "Burstable"
+        }
+      },
+      "PodAnnotations": {
+        "scheduling.k8s.io/group-name": "workers"
+      },
+      "CustomBindErrHandlerSucceeded": false
+    }
+  },
+  {
+    "source": "patched/observations/snapshot-0005.json",
+    "sourceSHA256": "e3585984bcd272dce54d8dd4d9c6d31f7916c51898935612b56bdd2d537a50f6",
+    "task": {
+      "UID": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+      "Job": "volcano-6382-patched-r03/workers",
+      "Name": "worker",
+      "Namespace": "volcano-6382-patched-r03",
+      "TaskRole": "",
+      "Resreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "InitResreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "DRAResreq": null,
+      "ResourceClaimKeys": null,
+      "ResourceClaimDRAResreq": null,
+      "NodeName": "",
+      "EvictionOccurred": false,
+      "JobAllocatedHyperNode": "",
+      "Status": 1,
+      "LastTransaction": null,
+      "Priority": 0,
+      "VolumeReady": false,
+      "Preemptable": true,
+      "BestEffort": false,
+      "HasRestartableInitContainer": false,
+      "SchGated": false,
+      "RevocableZone": "",
+      "NumaInfo": {
+        "Policy": "",
+        "ResMap": {}
+      },
+      "Pod": {
+        "metadata": {
+          "name": "worker",
+          "namespace": "volcano-6382-patched-r03",
+          "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+          "resourceVersion": "630",
+          "generation": 2,
+          "creationTimestamp": "2026-11-21T08:56:59Z",
+          "annotations": {
+            "scheduling.k8s.io/group-name": "workers"
+          },
+          "managedFields": [
+            {
+              "manager": "kubectl-create",
+              "operation": "Update",
+              "apiVersion": "v1",
+              "time": "2026-11-21T08:56:59Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:metadata": {
+                  "f:annotations": {
+                    ".": {},
+                    "f:scheduling.k8s.io/group-name": {}
+                  }
+                },
+                "f:spec": {
+                  "f:containers": {
+                    "k:{\"name\":\"main\"}": {
+                      ".": {},
+                      "f:image": {},
+                      "f:imagePullPolicy": {},
+                      "f:name": {},
+                      "f:resources": {
+                        ".": {},
+                        "f:requests": {
+                          ".": {},
+                          "f:cpu": {},
+                          "f:memory": {}
+                        }
+                      },
+                      "f:terminationMessagePath": {},
+                      "f:terminationMessagePolicy": {},
+                      "f:volumeMounts": {
+                        ".": {},
+                        "k:{\"mountPath\":\"/scratch\"}": {
+                          ".": {},
+                          "f:mountPath": {},
+                          "f:name": {}
+                        }
+                      }
+                    }
+                  },
+                  "f:dnsPolicy": {},
+                  "f:enableServiceLinks": {},
+                  "f:nodeSelector": {},
+                  "f:restartPolicy": {},
+                  "f:schedulerName": {},
+                  "f:securityContext": {},
+                  "f:terminationGracePeriodSeconds": {},
+                  "f:tolerations": {},
+                  "f:volumes": {
+                    ".": {},
+                    "k:{\"name\":\"scratch\"}": {
+                      ".": {},
+                      "f:name": {},
+                      "f:persistentVolumeClaim": {
+                        ".": {},
+                        "f:claimName": {}
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "manager": "vc-scheduler-patched",
+              "operation": "Update",
+              "apiVersion": "v1",
+              "time": "2026-11-21T08:57:00Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:status": {
+                  "f:conditions": {
+                    "k:{\"type\":\"PodScheduled\"}": {
+                      "f:message": {},
+                      "f:reason": {}
+                    }
+                  }
+                }
+              },
+              "subresource": "status"
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "scratch",
+              "persistentVolumeClaim": {
+                "claimName": "scratch"
+              }
+            },
+            {
+              "name": "kube-api-access-rj8g2",
+              "projected": {
+                "sources": [
+                  {
+                    "serviceAccountToken": {
+                      "expirationSeconds": 3607,
+                      "path": "token"
+                    }
+                  },
+                  {
+                    "configMap": {
+                      "name": "kube-root-ca.crt",
+                      "items": [
+                        {
+                          "key": "ca.crt",
+                          "path": "ca.crt"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "downwardAPI": {
+                      "items": [
+                        {
+                          "path": "namespace",
+                          "fieldRef": {
+                            "apiVersion": "v1",
+                            "fieldPath": "metadata.namespace"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "main",
+              "image": "registry.k8s.io/pause:3.10.1",
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "scratch",
+                  "mountPath": "/scratch"
+                },
+                {
+                  "name": "kube-api-access-rj8g2",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "IfNotPresent"
+            }
+          ],
+          "restartPolicy": "Never",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "nodeSelector": {
+            "repro.volcano.sh/volcano-6382-patched-r03": "ready"
+          },
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "securityContext": {},
+          "schedulerName": "volcano-6382-patched-r03",
+          "tolerations": [
+            {
+              "key": "node-role.kubernetes.io/control-plane",
+              "operator": "Exists",
+              "effect": "NoSchedule"
+            },
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ],
+          "priority": 0,
+          "enableServiceLinks": true,
+          "preemptionPolicy": "PreemptLowerPriority"
+        },
+        "status": {
+          "phase": "Pending",
+          "conditions": [
+            {
+              "type": "PodScheduled",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-21T08:56:59Z",
+              "reason": "Unschedulable",
+              "message": "Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector."
+            }
+          ],
+          "qosClass": "Burstable"
+        }
+      },
+      "PodAnnotations": {
+        "scheduling.k8s.io/group-name": "workers"
+      },
+      "CustomBindErrHandlerSucceeded": false
+    }
+  },
+  {
+    "source": "patched/observations/snapshot-0006.json",
+    "sourceSHA256": "e3585984bcd272dce54d8dd4d9c6d31f7916c51898935612b56bdd2d537a50f6",
+    "task": {
+      "UID": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+      "Job": "volcano-6382-patched-r03/workers",
+      "Name": "worker",
+      "Namespace": "volcano-6382-patched-r03",
+      "TaskRole": "",
+      "Resreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "InitResreq": {
+        "MilliCPU": 100,
+        "Memory": 33554432,
+        "ScalarResources": {
+          "pods": 1
+        },
+        "MaxTaskNum": 0
+      },
+      "DRAResreq": null,
+      "ResourceClaimKeys": null,
+      "ResourceClaimDRAResreq": null,
+      "NodeName": "",
+      "EvictionOccurred": false,
+      "JobAllocatedHyperNode": "",
+      "Status": 1,
+      "LastTransaction": null,
+      "Priority": 0,
+      "VolumeReady": false,
+      "Preemptable": true,
+      "BestEffort": false,
+      "HasRestartableInitContainer": false,
+      "SchGated": false,
+      "RevocableZone": "",
+      "NumaInfo": {
+        "Policy": "",
+        "ResMap": {}
+      },
+      "Pod": {
+        "metadata": {
+          "name": "worker",
+          "namespace": "volcano-6382-patched-r03",
+          "uid": "62d84322-6c3d-43db-b9dc-88f07be258e7",
+          "resourceVersion": "630",
+          "generation": 2,
+          "creationTimestamp": "2026-11-21T08:56:59Z",
+          "annotations": {
+            "scheduling.k8s.io/group-name": "workers"
+          },
+          "managedFields": [
+            {
+              "manager": "kubectl-create",
+              "operation": "Update",
+              "apiVersion": "v1",
+              "time": "2026-11-21T08:56:59Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:metadata": {
+                  "f:annotations": {
+                    ".": {},
+                    "f:scheduling.k8s.io/group-name": {}
+                  }
+                },
+                "f:spec": {
+                  "f:containers": {
+                    "k:{\"name\":\"main\"}": {
+                      ".": {},
+                      "f:image": {},
+                      "f:imagePullPolicy": {},
+                      "f:name": {},
+                      "f:resources": {
+                        ".": {},
+                        "f:requests": {
+                          ".": {},
+                          "f:cpu": {},
+                          "f:memory": {}
+                        }
+                      },
+                      "f:terminationMessagePath": {},
+                      "f:terminationMessagePolicy": {},
+                      "f:volumeMounts": {
+                        ".": {},
+                        "k:{\"mountPath\":\"/scratch\"}": {
+                          ".": {},
+                          "f:mountPath": {},
+                          "f:name": {}
+                        }
+                      }
+                    }
+                  },
+                  "f:dnsPolicy": {},
+                  "f:enableServiceLinks": {},
+                  "f:nodeSelector": {},
+                  "f:restartPolicy": {},
+                  "f:schedulerName": {},
+                  "f:securityContext": {},
+                  "f:terminationGracePeriodSeconds": {},
+                  "f:tolerations": {},
+                  "f:volumes": {
+                    ".": {},
+                    "k:{\"name\":\"scratch\"}": {
+                      ".": {},
+                      "f:name": {},
+                      "f:persistentVolumeClaim": {
+                        ".": {},
+                        "f:claimName": {}
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "manager": "vc-scheduler-patched",
+              "operation": "Update",
+              "apiVersion": "v1",
+              "time": "2026-11-21T08:57:00Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:status": {
+                  "f:conditions": {
+                    "k:{\"type\":\"PodScheduled\"}": {
+                      "f:message": {},
+                      "f:reason": {}
+                    }
+                  }
+                }
+              },
+              "subresource": "status"
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "scratch",
+              "persistentVolumeClaim": {
+                "claimName": "scratch"
+              }
+            },
+            {
+              "name": "kube-api-access-rj8g2",
+              "projected": {
+                "sources": [
+                  {
+                    "serviceAccountToken": {
+                      "expirationSeconds": 3607,
+                      "path": "token"
+                    }
+                  },
+                  {
+                    "configMap": {
+                      "name": "kube-root-ca.crt",
+                      "items": [
+                        {
+                          "key": "ca.crt",
+                          "path": "ca.crt"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "downwardAPI": {
+                      "items": [
+                        {
+                          "path": "namespace",
+                          "fieldRef": {
+                            "apiVersion": "v1",
+                            "fieldPath": "metadata.namespace"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "main",
+              "image": "registry.k8s.io/pause:3.10.1",
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "scratch",
+                  "mountPath": "/scratch"
+                },
+                {
+                  "name": "kube-api-access-rj8g2",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "IfNotPresent"
+            }
+          ],
+          "restartPolicy": "Never",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "nodeSelector": {
+            "repro.volcano.sh/volcano-6382-patched-r03": "ready"
+          },
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "securityContext": {},
+          "schedulerName": "volcano-6382-patched-r03",
+          "tolerations": [
+            {
+              "key": "node-role.kubernetes.io/control-plane",
+              "operator": "Exists",
+              "effect": "NoSchedule"
+            },
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ],
+          "priority": 0,
+          "enableServiceLinks": true,
+          "preemptionPolicy": "PreemptLowerPriority"
+        },
+        "status": {
+          "phase": "Pending",
+          "conditions": [
+            {
+              "type": "PodScheduled",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-21T08:56:59Z",
+              "reason": "Unschedulable",
+              "message": "Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector."
+            }
+          ],
+          "qosClass": "Burstable"
+        }
+      },
+      "PodAnnotations": {
+        "scheduling.k8s.io/group-name": "workers"
+      },
+      "CustomBindErrHandlerSucceeded": false
+    }
+  }
+]

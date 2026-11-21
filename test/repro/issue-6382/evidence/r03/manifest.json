@@ -1,0 +1,36 @@
+{
+  "baselineCommit": "993abc8deb337c67eff18186bfcc2d043fbaee2d",
+  "candidateCommit": "c5fb5be058db81c35351dd44c7334e8530976aaf",
+  "kind": "v0.33.0",
+  "kubernetes": "v1.34.3",
+  "nodeArchitecture": "linux/arm64",
+  "schedulerBuildToolchain": "go1.26.0 darwin/arm64",
+  "python": "3.13.10",
+  "exitCode": 0,
+  "completedComparisons": 1,
+  "completedExpectedResults": 1,
+  "developmentAttempts": [
+    {
+      "id": "r01",
+      "result": "incomplete binding assertion",
+      "details": "The first fixture trial reached the cache assertions but did not initialize Queue.status=Open and put scheduler logs in the watched config directory. Both fixture setup problems were corrected before r02."
+    },
+    {
+      "id": "r02",
+      "result": "completed, exit 0; intermediate fixture, logs independently verified conflict/retry/success ordering"
+    },
+    {
+      "id": "r03",
+      "result": "completed, exit 0; final fixture explicitly waits for conflict, fresh GET and subsequent successful resync"
+    }
+  ],
+  "fixtureSHA256": {
+    "run.py": "9263705bd82b47e82e506a5760fda43bf9a11bd865d78b8f0a803c80c5f9e05b",
+    "api-relay/main.go": "256d5e1895ad72c0cd44b405e6f7d744944ca153a1728d989f85640a3d4d61fa"
+  },
+  "fullRawOutputRetainedLocally": true,
+  "publishedCacheEvidence": "Complete target TaskInfo extracted from every numbered cache observation; source raw snapshot SHA256 retained. Other cached tasks and node objects omitted.",
+  "publishedSchedulerLogs": "Target task and bind/resync excerpts; full scheduler logs retained in raw output.",
+  "command": "python3 \"$VOLCANO_REPRO_ROOT/run.py\" --kubeconfig \"$VOLCANO_REPRO_KUBECONFIG\" --context kind-volcano-6382 --repo \"$VOLCANO_PATCHED\" --relay \"$VOLCANO_REPRO_RUN/api-relay\" --baseline \"$VOLCANO_REPRO_RUN/vc-scheduler-baseline\" --patched \"$VOLCANO_REPRO_RUN/vc-scheduler-patched\" --run-id r03 --output \"$VOLCANO_REPRO_RUN/evidence-r03\"",
+  "commandPaths": "Paths normalized to the variables defined in README; binary and source hashes identify the executed inputs."
+}

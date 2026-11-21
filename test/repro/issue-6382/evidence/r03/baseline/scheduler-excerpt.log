@@ -1,0 +1,130 @@
+I1121 16:56:52.700903   52662 cache.go:657] no registered bind method, new a default one
+I1121 16:56:52.718046   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:52.733588   52662 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-baseline-r03/worker
+I1121 16:56:52.733694   52662 event_handlers.go:297] PVC for pod <volcano-6382-baseline-r03/worker> not yet in informer cache, add task and retry: looking up PVC volcano-6382-baseline-r03/scratch: persistentvolumeclaim "scratch" not found
+I1121 16:56:52.733756   52662 event_handlers.go:577] Added pod <volcano-6382-baseline-r03/worker> into cache.
+I1121 16:56:52.822351   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:52.823886   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:52.824205   52662 overcommit.go:126] Sufficient resources, permit job <volcano-6382-baseline-r03/workers> to be inqueue
+I1121 16:56:52.824304   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:52.832396   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:52.832409   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:53.042784   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.043222   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:53.043392   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:53.079523   52662 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-baseline-r03/worker
+I1121 16:56:53.079549   52662 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-baseline-r03/worker
+I1121 16:56:53.079581   52662 event_handlers.go:602] Updated pod <volcano-6382-baseline-r03/worker> in cache.
+I1121 16:56:53.110016   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.243990   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.244303   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:53.244483   52662 allocate.go:244] Added Job <volcano-6382-baseline-r03/workers> into Queue <default> in regular phase
+I1121 16:56:53.244513   52662 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-baseline-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:56:53.244558   52662 allocate.go:1006] There are <1> nodes for Job <volcano-6382-baseline-r03/workers>
+I1121 16:56:53.244712   52662 predicate_helper.go:92] Considering Task <volcano-6382-baseline-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:56:53.252053   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:53.252078   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:53.252471   52662 cache.go:1227] Updating pod condition for volcano-6382-baseline-r03/worker to (PodScheduled==False)
+I1121 16:56:53.258375   52662 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-baseline-r03/worker
+I1121 16:56:53.258397   52662 util.go:93] schedulerPodName  is responsible to Pod volcano-6382-baseline-r03/worker
+I1121 16:56:53.258437   52662 event_handlers.go:602] Updated pod <volcano-6382-baseline-r03/worker> in cache.
+I1121 16:56:53.459986   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.460553   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:53.460899   52662 allocate.go:244] Added Job <volcano-6382-baseline-r03/workers> into Queue <default> in regular phase
+I1121 16:56:53.460948   52662 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-baseline-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:56:53.460970   52662 allocate.go:1006] There are <1> nodes for Job <volcano-6382-baseline-r03/workers>
+I1121 16:56:53.461072   52662 predicate_helper.go:92] Considering Task <volcano-6382-baseline-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:56:53.461265   52662 cache.go:1252] task unscheduleable volcano-6382-baseline-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+I1121 16:56:53.519162   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.662458   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.663459   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:53.664110   52662 allocate.go:244] Added Job <volcano-6382-baseline-r03/workers> into Queue <default> in regular phase
+I1121 16:56:53.664180   52662 allocate.go:410] "Try to allocate resource" queue="default" job="volcano-6382-baseline-r03/workers" nominatedHyperNode="" taskNum=1
+I1121 16:56:53.664210   52662 allocate.go:1006] There are <1> nodes for Job <volcano-6382-baseline-r03/workers>
+I1121 16:56:53.664313   52662 predicate_helper.go:92] Considering Task <volcano-6382-baseline-r03/worker> on node <volcano-6382-control-plane>: <cpu 100.00, memory 33554432.00, pods 1.00> vs. <cpu 1050.00, memory 3483602944.00, ephemeral-storage 99252940800000.00, hugepages-1Gi 0.00, hugepages-2Mi 0.00, hugepages-32Mi 0.00, hugepages-64Ki 0.00, pods 101.00>
+I1121 16:56:53.664632   52662 cache.go:1252] task unscheduleable volcano-6382-baseline-r03/worker, message: Node: 0/1 nodes are unavailable: 1 node(s) didn't match Pod's node affinity/selector., skip by no condition update
+I1121 16:56:53.724384   52662 cache.go:1419] Successfully synced task <volcano-6382-baseline-r03/worker>
+I1121 16:56:53.724514   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.865177   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:53.865585   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:53.865899   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:53.871936   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:53.871973   52662 util.go:131] schedulerPodName  is responsible to PodGroup volcano-6382-baseline-r03/workers
+I1121 16:56:54.072351   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:54.072659   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:54.072819   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:54.274157   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:54.274599   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:54.274846   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:54.475982   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:54.476446   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:54.476746   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:54.677433   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:54.677994   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:54.678278   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:54.879633   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:54.879868   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:54.879991   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:55.081432   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:55.082065   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:55.082478   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:55.283418   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:55.283785   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:55.283926   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:55.485266   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:55.485690   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:55.485930   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:55.687331   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:55.687678   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:55.687859   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:55.888733   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:55.889419   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:55.889783   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:56.091383   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:56.092008   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:56.092256   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:56.293562   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:56.293996   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:56.294235   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:56.495049   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:56.495410   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:56.495576   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:56.697566   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:56.698273   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:56.698593   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:56.900162   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:56.900623   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:56.900867   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:57.101843   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:57.102164   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:57.102327   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:57.303601   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:57.303887   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:57.304038   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:57.505337   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:57.507633   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:57.507863   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:57.709825   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:57.710204   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:57.710394   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:57.911387   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:57.912167   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:57.912456   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:58.113852   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:58.114227   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:58.114427   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:58.315454   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:58.316145   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:58.316341   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:58.517482   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:58.518529   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:58.519196   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:58.720575   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:58.721819   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:58.722150   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:58.923306   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:58.923715   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:58.924038   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.
+I1121 16:56:59.124602   52662 cache.go:1700] The priority of job <volcano-6382-baseline-r03/workers> is </0>
+I1121 16:56:59.125087   52662 proportion.go:110] Considering Job <volcano-6382-baseline-r03/workers>.
+I1121 16:56:59.125305   52662 allocate.go:318] Task <volcano-6382-baseline-r03/worker> has external scheduling gate, skip it.

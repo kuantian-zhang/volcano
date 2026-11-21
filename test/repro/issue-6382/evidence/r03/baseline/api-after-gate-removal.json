@@ -1,0 +1,135 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "scheduling.k8s.io/group-name": "workers"
+    },
+    "creationTimestamp": "2026-11-21T08:56:52Z",
+    "generation": 2,
+    "name": "worker",
+    "namespace": "volcano-6382-baseline-r03",
+    "resourceVersion": "573",
+    "uid": "83393811-378d-4844-abee-363d09e0d5b9"
+  },
+  "spec": {
+    "containers": [
+      {
+        "image": "registry.k8s.io/pause:3.10.1",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "main",
+        "resources": {
+          "requests": {
+            "cpu": "100m",
+            "memory": "32Mi"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/scratch",
+            "name": "scratch"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-7rmq8",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeSelector": {
+      "repro.volcano.sh/volcano-6382-baseline-r03": "ready"
+    },
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "volcano-6382-baseline-r03",
+    "securityContext": {},
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 30,
+    "tolerations": [
+      {
+        "effect": "NoSchedule",
+        "key": "node-role.kubernetes.io/control-plane",
+        "operator": "Exists"
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "name": "scratch",
+        "persistentVolumeClaim": {
+          "claimName": "scratch"
+        }
+      },
+      {
+        "name": "kube-api-access-7rmq8",
+        "projected": {
+          "defaultMode": 420,
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ],
+                "name": "kube-root-ca.crt"
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    },
+                    "path": "namespace"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-21T08:56:52Z",
+        "message": "Scheduling is blocked due to non-empty scheduling gates",
+        "reason": "SchedulingGated",
+        "status": "False",
+        "type": "PodScheduled"
+      }
+    ],
+    "phase": "Pending",
+    "qosClass": "Burstable"
+  }
+}
